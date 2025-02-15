@@ -1,0 +1,22 @@
+>cemantic
+>non cemantic
+>p,pre 
+>a(href="link",target="_blank")
+>formatting tags:<b><i><u>
+>to move text :<marque direction="right">
+><sup>,<sub>
+>lists>1.ordered 2.unordered 3.description
+	<ul type"round,square">
+	<ol type"A,a,1,i">
+><ol type="A">
+	<li>1/i>
+	<li>2/i>
+	
+/ol>
+
+>table:<table>
+		<tr>
+			<td></td>	
+		</tr>
+	</table>
+>tag to align at center:<center></center>
