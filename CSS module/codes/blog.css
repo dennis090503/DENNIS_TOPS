@@ -1,0 +1,57 @@
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+    padding: 30px 20px;
+    color: #333;
+  }
+  
+  /* Container styling */
+  .blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Title font - Merriweather */
+  .title {
+    font-family: 'Merriweather', serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  /* Subtitle */
+  .subtitle {
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Body text */
+  .body-text {
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+  }
+  
+  /* Responsive typography */
+  @media (max-width: 600px) {
+    .title {
+      font-size: 28px;
+    }
+  
+    .subtitle {
+      font-size: 18px;
+    }
+  
+    .body-text {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+  

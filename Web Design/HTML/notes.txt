@@ -1,3 +1,16 @@
+#responsive web design
+> responsive web design is about creating webpages that look good on all devices,it automatically
+adjusts for diff screen size and viewports
+tag=<meta name="viewport" content="device-width"></meta>
+
+#SEO
+>SEARCH ENGINE OPTIMIZATION is the process of inproving  the quality and quantity
+of website traffic to a website on a web page from search engines 
+
+#Package manager-npm,yarn,compost
+# task runner and build tools:parsel
+
+
 >cemantic
 >non cemantic
 >p,pre 
@@ -14,9 +27,24 @@
 	
 /ol>
 
->table:<table>
+>table:<table cellpadding="10px" cellspacing="2pxp">
+		<caption><h1></h1></caption>	->for heading in table
 		<tr>
 			<td></td>	
 		</tr>
 	</table>
+	
 >tag to align at center:<center></center>
+
+
+>forms attributes:value(to send a fixed data),readonly(cannot be changed),disabled,multiple(to add more files),checked,multiple in dropdown list,
+autofocus,reqired
+
+for input type number: min="1" max="5",pattern=[0-9][1,5]
+for input type str: (minlength="10",maxlength="25",pattern=[A-Za-z])
+
+>to send file data enctype="multipart/form-data"
+
+>advanced dropdown list>> <input list="raj"><datalist>
+												<option></option>
+											</datalist>

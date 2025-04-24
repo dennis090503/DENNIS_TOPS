@@ -1,0 +1,37 @@
+    <!-- flex works on parent class -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .main{
+                /* to display all the boxes in one line */
+                display: flex;
+                /* to display all the boxes at center of page */
+                justify-content: center;  /*values: end,start */
+
+            }
+            .main1{
+                height: 100px;
+                width: 100px;
+                border: 1px solid black;
+                /* to display content at center of box */
+                text-align: center;
+                align-content: center;
+                /* spacing between boxes */
+                margin: 20px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="main1">1</div>
+            <div class="main1">2</div>
+            <div class="main1">3</div>
+
+        </div>
+    </body>
+    </html>
