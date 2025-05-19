@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        ul {
+            list-style-type: none;
+        }
+        li{
+            display: inline;
+            color: black;
+        }
+        li a {
+            color: black; /* set link color */
+            padding: 10px; /* optional: spacing inside links */
+        }
+        li a:hover {
+            text-decoration: underline;
+        }
+        .main{
+            background-color: rgb(238, 241, 241);
+            display: flex;
+            justify-content: space-between;
+        }
+        .movies {
+            padding: 2rem;
+            background: #fff;
+            text-align: center;
+        }
+        
+        .movies h2 {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .movies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .movie-card {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .movie-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .movie-card h3 {
+            font-size: 1.1rem;
+        }
+        
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+        .topnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.topnav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.topnav img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.topnav input[type="text"] {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="logo" href=""><img src="images/logo.jpg" style="height: 50px;width: 50px;"></a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <input type="text" placeholder="Search..">
+      </div>
+    <div class="main">
+        <ul>
+            <li><a href="/Movies">Movies</a></li>
+            <li><a href="/Stream">Stream</a></li>
+            <li><a href="/Events">Events</a></li>
+            <li><a href="/Plays">Plays</a></li>
+            <li><a href="/Sports">Sports</a></li>
+            <li><a href="/Activities">Activities</a></li>
+        </ul>
+        <ul>
+            <li><a href="/list_show">List your show </a></li>
+            <li><a href="/Stream">Offer</a></li>
+        </ul>
+        
+    </div>
+    <section class="movies">
+        <h2>Recommended movies</h2>
+        <div class="movies-grid">
+          <div class="movie-card">
+            <img src="./images/keseri.jpg" alt="Movie 1">
+            <h3>Keseri Ch:2</h3>
+          </div>
+          <div class="movie-card">
+            <img src="/images/raid.jpg" alt="Movie 2">
+            <h3>Raid</h3>
+          </div>
+          <div class="movie-card">
+            <img src="images/ground_zero.jpg" alt="Movie 3">
+            <h3>Ground zero</h3>
+          </div>
+          <div class="movie-card">
+            <img src="images/jaat.jpg" alt="Movie 4">
+            <h3>Jaat</h3>
+          </div>
+        </div>
+      </section>
+</body>
+</html>
