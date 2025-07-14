@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Date Interval Calculator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css">
+</head>
+<body>
+<div class="container">
+  <h2 class="text-center">Date Interval</h2>
+  
+  <div class="form-group">
+    <label>From:</label>
+    <div class="input-group date" id="fromDatePicker">
+      <input type="text" class="form-control" id="fromDate" />
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label>To:</label>
+    <div class="input-group date" id="toDatePicker">
+      <input type="text" class="form-control" id="toDate" />
+      <span class="input-group-addon">
+        <span class="glyphicon glyphicon-calendar"></span>
+      </span>
+    </div>
+  </div>
+  
+  <button id="calculateBtn" class="btn btn-primary">Calculate</button>
+  
+  <div id="result" class="well" style="margin-top: 20px;"></div>
+</div>
+
+<!-- JS Libraries -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+
+<script>
+  $(function () {
+    // Initialize datetime pickers
+    $('#fromDatePicker').datetimepicker({ format: 'MM/DD/YYYY' });
+    $('#toDatePicker').datetimepicker({ format: 'MM/DD/YYYY' });
+
+    // On button click, calculate date interval
+    $('#calculateBtn').click(function () {
+      const from = moment($('#fromDate').val(), 'MM/DD/YYYY');
+      const to = moment($('#toDate').val(), 'MM/DD/YYYY');
+
+      // Check for valid input
+      if (!from.isValid() || !to.isValid()) {
+        $('#result').html('<div class="alert alert-danger">Please enter valid dates.</div>');
+        return;
+      }
+
+      const diffDays = to.diff(from, 'days');
+      const diffWeeks = Math.floor(diffDays / 7);
+      const diffMonths = to.diff(from, 'months');
+      const diffYears = to.diff(from, 'years');
+
+      const resultHtml = `
+        <strong>Date interval between ${from.format('MM/DD/YYYY')} and ${to.format('MM/DD/YYYY')}</strong><br><br>
+        In years : ${diffYears}<br>
+        In months : ${diffMonths}<br>
+        In weeks : ${diffWeeks}<br>
+        In days : ${diffDays}
+      `;
+
+      $('#result').html(resultHtml);
+    });
+  });
+</script>
+</body>
+</html>

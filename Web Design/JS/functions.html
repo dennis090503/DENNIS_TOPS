@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter n" id="number">
+    <button type="submit" onclick="factorial()">Submit</button>
+    <h1 id="text-box"></h1>
+    <script>
+        function factorial(){
+            let num = document.getElementById("number")
+            num = parseInt(num.value);
+            let n;
+            let fact = 1;
+            for (n=1;n<=num;n++){
+                fact*=n
+            }
+            console.log(fact)
+            document.getElementById("text-box").innerText = `factorial of ${num} = ${fact}`
+        }
+    </script>
+</body>
+</html>
