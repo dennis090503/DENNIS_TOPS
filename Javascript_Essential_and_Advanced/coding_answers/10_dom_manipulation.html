@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Manipulation Demo</h1>
+    <p id="myParagraph">Hello, World!</p>
+    <button id="changeTextBtn">Change Text</button>
+    <button id="changeColorBtn">Change Color</button>
+    <button id="resetBtn">Reset</button>
+
+    <script>
+        var paragraph = document.getElementById("myParagraph");
+        var changeTextBtn = document.getElementById("changeTextBtn");
+        var changeColorBtn = document.getElementById("changeColorBtn");
+        var resetBtn = document.getElementById("resetBtn");
+        
+        function changeText() {
+            paragraph.innerHTML = "JavaScript is fun!";
+        }
+        
+        function changeColor() {
+            paragraph.style.color = "blue";
+        }
+        
+        function reset() {
+            paragraph.innerHTML = "Hello, World!";
+            paragraph.style.color = "black";
+        }
+        
+        changeTextBtn.addEventListener("click", changeText);
+        changeColorBtn.addEventListener("click", changeColor);
+        resetBtn.addEventListener("click", reset);
+    </script>
+</body>
+</html>

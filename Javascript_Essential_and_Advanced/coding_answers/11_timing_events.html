@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timing Events Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .container {
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            transition: background-color 0.5s;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #clock {
+            font-size: 48px;
+            font-weight: bold;
+            font-family: monospace;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Timing Events Demo</h1>
+    
+    <div class="container" id="colorBox">
+        <h2>Background Color Changer</h2>
+        <p>This background will change after 5 seconds</p>
+    </div>
+    
+    <div>
+        <h2>Digital Clock</h2>
+        <div id="clock">--:--:--</div>
+        <button id="stopClockBtn">Stop Clock</button>
+    </div>
+
+    <script>
+        // TASK 1: Change background color after 5 seconds
+        var colorBox = document.getElementById("colorBox");
+        
+        setTimeout(function() {
+            colorBox.style.backgroundColor = "lightblue";
+            colorBox.style.borderRadius = "10px";
+            colorBox.style.padding = "20px";
+        }, 5000);
+        
+        // TASK 2: Digital clock that updates every second
+        var clockElement = document.getElementById("clock");
+        var clockInterval;
+        
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            
+            clockElement.innerHTML = hours + ":" + minutes + ":" + seconds;
+        }
+        
+        clockInterval = setInterval(updateClock, 1000);
+        updateClock();
+        
+        var stopClockBtn = document.getElementById("stopClockBtn");
+        stopClockBtn.addEventListener("click", function() {
+            clearInterval(clockInterval);
+            alert("Clock has been stopped");
+        });
+    </script>
+</body>
+</html>

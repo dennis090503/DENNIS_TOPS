@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Events Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Event Listener Demo</h1>
+    <button id="myButton">Click Me!</button>
+    <p id="message"></p>
+
+    <script>
+        var button = document.getElementById("myButton");
+        var messagePara = document.getElementById("message");
+        
+        function handleClick() {
+            alert("Button clicked!");
+            messagePara.innerHTML = "Button was clicked at " + new Date().toLocaleTimeString();
+        }
+        
+        button.addEventListener("click", handleClick);
+    </script>
+</body>
+</html>
