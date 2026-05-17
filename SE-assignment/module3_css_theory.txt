@@ -1,0 +1,99 @@
+
+MODULE 3 – CSS THEORY ANSWERS
+=============================
+
+1. CSS SELECTORS
+Selectors target HTML elements.
+
+Element Selector:
+p {}
+
+Class Selector:
+.box {}
+
+ID Selector:
+#header {}
+
+2. CSS SPECIFICITY
+Specificity decides which style gets applied.
+Priority:
+Inline > ID > Class > Element
+
+3. INLINE VS INTERNAL VS EXTERNAL CSS
+Inline:
+Inside element
+
+Internal:
+Inside style tag
+
+External:
+Separate CSS file
+
+External CSS is preferred for maintainability.
+
+4. CSS BOX MODEL
+Components:
+- Content
+- Padding
+- Border
+- Margin
+
+5. BORDER-BOX VS CONTENT-BOX
+content-box:
+Default sizing method.
+
+border-box:
+Includes padding and border in total size.
+
+6. FLEXBOX
+Flexbox is used for one-dimensional layouts.
+
+flex-container:
+Parent container
+
+flex-item:
+Child elements
+
+7. FLEXBOX PROPERTIES
+justify-content:
+Horizontal alignment
+
+align-items:
+Vertical alignment
+
+flex-direction:
+Row or column arrangement
+
+8. CSS GRID
+Grid is used for two-dimensional layouts.
+
+Grid is better for complex layouts.
+
+9. GRID PROPERTIES
+grid-template-columns:
+Defines columns
+
+grid-template-rows:
+Defines rows
+
+grid-gap:
+Spacing between items
+
+10. MEDIA QUERIES
+Media queries make websites responsive.
+
+Example:
+@media(max-width:600px){
+ body{
+   font-size:14px;
+ }
+}
+
+11. WEB SAFE VS CUSTOM FONTS
+Web-safe fonts are pre-installed on devices.
+Custom fonts provide better design.
+
+12. FONT-FAMILY
+Defines font styles.
+
+Google Fonts can be imported using link tags.

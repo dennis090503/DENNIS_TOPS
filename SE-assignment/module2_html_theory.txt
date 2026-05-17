@@ -1,0 +1,88 @@
+
+MODULE 2 – HTML THEORY ANSWERS
+==============================
+
+1. WHAT IS HTML?
+HTML stands for HyperText Markup Language. It is used to create webpages and structure content on the internet.
+
+2. BASIC STRUCTURE OF HTML DOCUMENT
+Mandatory Tags:
+<html> - Root element
+<head> - Metadata section
+<title> - Page title
+<body> - Visible content
+
+3. BLOCK VS INLINE ELEMENTS
+Block Elements:
+Take full width.
+Examples:
+<div>, <p>, <h1>
+
+Inline Elements:
+Take only required width.
+Examples:
+<span>, <a>, <strong>
+
+4. SEMANTIC HTML
+Semantic HTML improves accessibility and SEO.
+
+Examples:
+<header>
+<footer>
+<main>
+<section>
+
+5. HTML FORMS
+Forms collect user input.
+
+Input:
+Single line input
+
+Textarea:
+Multi-line input
+
+Select:
+Dropdown menu
+
+Button:
+Triggers actions
+
+6. GET VS POST
+GET:
+- Data visible in URL
+- Used for fetching data
+
+POST:
+- Data hidden
+- Used for secure submissions
+
+7. LABEL ELEMENT
+Improves accessibility by connecting labels with inputs.
+
+8. HTML TABLE STRUCTURE
+<table>:
+Creates table
+
+<tr>:
+Table row
+
+<th>:
+Table heading
+
+<td>:
+Table data
+
+<thead>:
+Header section
+
+9. COLSPAN VS ROWSPAN
+colspan:
+Merges columns
+
+rowspan:
+Merges rows
+
+10. TABLES FOR LAYOUT
+Tables should not be used for layouts because they reduce flexibility and accessibility.
+Better alternative:
+CSS Flexbox and CSS Grid

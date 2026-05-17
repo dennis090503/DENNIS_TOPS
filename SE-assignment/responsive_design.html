@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+font-family:Arial;
+}
+
+.container{
+display:flex;
+}
+
+.col{
+flex:1;
+padding:20px;
+}
+
+@media(max-width:768px){
+.container{
+flex-direction:column;
+}
+}
+</style>
+</head>
+<body>
+
+<nav>Navigation Bar</nav>
+
+<div class="container">
+<div class="col">Column 1</div>
+<div class="col">Column 2</div>
+</div>
+
+<footer>Footer</footer>
+
+</body>
+</html>

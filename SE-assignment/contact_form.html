@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Form</title>
+<link rel="stylesheet" href="form_style.css">
+</head>
+<body>
+
+<form>
+<label for="name">Full Name</label>
+<input type="text" id="name" required minlength="3">
+
+<label for="email">Email</label>
+<input type="email" id="email" required>
+
+<label for="phone">Phone</label>
+<input type="tel" id="phone" pattern="[0-9]{10}" required>
+
+<label for="subject">Subject</label>
+<select id="subject">
+<option>General</option>
+<option>Support</option>
+</select>
+
+<label for="message">Message</label>
+<textarea id="message" minlength="10" maxlength="200"></textarea>
+
+<button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
