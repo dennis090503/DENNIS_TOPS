@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/images/jaat.jpg" alt="jaat image" id="img">
+    <br>
+    <button onclick="previous_image()">Previous</button>
+    <button onclick="next_image()">Next</button>
+
+    <script>
+        let image_tag = document.getElementById("img")
+        console.log(image_tag.src)
+        function next_image(){
+            if(image_tag.src.match("/images/jaat.jpg")){
+                image_tag.src = "/images/raid.jpg"
+            }
+            
+            else if(image_tag.src.match("/images/raid.jpg")){
+                image_tag.src = "/images/keseri.jpg"
+            }
+            
+            else{
+                image_tag.src = "/images/jaat.jpg"
+            }
+        }
+        function previous_image(){
+            if(image_tag.src.match("/images/raid.jpg")){
+                image_tag.src = "/images/jaat.jpg"
+            }
+            
+            else if(image_tag.src.match("/images/keseri.jpg")){
+                image_tag.src = "/images/raid.jpg"
+            }
+            
+            else{
+                image_tag.src = "/images/keseri.jpg"
+            }
+        }
+    </script>
+</body>
+</html>
