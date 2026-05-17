@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Interaction System | Hashcrypt Technologies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#interaction-form">New Interaction</a></li>
+            <li><a href="#submissions-section">View Submissions</a></li>
+        </ul>
+    </nav>
+
+   
+
+    <main class="container">
+        
+        <section id="interaction-form" class="form-section">
+            <h2>Customer Interaction Form</h2>
+            <p class="section-desc">All fields are mandatory. Please fill out the customer details carefully.</p>
+            
+            <form id="customerForm" novalidate>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="John Doe">
+                        <small class="error-msg" id="nameError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="e.g., 9876543210" maxlength="10">
+                        <small class="error-msg" id="phoneError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com">
+                        <small class="error-msg" id="emailError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="vehicle">Vehicle Model / Info</label>
+                        <input type="text" id="vehicle" placeholder="e.g., Tesla Model 3 / Sedan">
+                        <small class="error-msg" id="vehicleError"></small>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="complaint">Complaint / Interaction Notes</label>
+                        <textarea id="complaint" rows="4" placeholder="Describe the issue or interaction details here..."></textarea>
+                        <small class="error-msg" id="complaintError"></small>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-submit">Submit Details</button>
+                    <button type="button" id="resetBtn" class="btn btn-reset">Reset Form</button>
+                </div>
+            </form>
+            
+            <div id="successMessage" class="success-toast hidden">
+                ✓ Data saved successfully to LocalStorage!
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="submissions-section" class="submissions-section">
+            <h2>Logged Customer Interactions</h2>
+            
+            <div class="table-responsive">
+                <table id="submissionsTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Vehicle</th>
+                            <th>Complaint / Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        </tbody>
+                </table>
+            </div>
+            
+            <div id="noDataMessage" class="no-data hidden">
+                No data available
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 Hashcrypt Technologies Pvt. Ltd. | Digitized Interaction UI</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

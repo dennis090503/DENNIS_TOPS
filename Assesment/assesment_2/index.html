@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Registration | Swan Solution</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .error-feedback { font-size: 0.85rem; color: #dc3545; min-height: 20px; margin-top: 4px; }
+        .form-control.is-invalid { border-color: #dc3545; }
+        .form-control.is-valid { border-color: #198754; }
+    </style>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm mb-4">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Swan Hotel Management</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="index.html">Guest Registration</a>
+                <a class="nav-link" href="view.html">View Submissions</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mb-5">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-primary text-white p-3">
+                        <h4 class="mb-0">Digital Check-In Intake Form</h4>
+                    </div>
+                    <div class="card-body p-4">
+                        
+                        <div id="messageBox" class="alert d-none" role="alert"></div>
+
+                        <form id="registrationForm" novalidate>
+                            <div class="row g-3" id="formDelegationWrapper">
+                                
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label fw-semibold">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Jane Doe">
+                                    <div class="error-feedback" id="fullNameErr"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label fw-semibold">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="10-digit number">
+                                    <div class="error-feedback" id="phoneErr"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-semibold">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="name@domain.com">
+                                    <div class="error-feedback" id="emailErr"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="aadhar" class="form-label fw-semibold">Aadhar Card Number</label>
+                                    <input type="text" class="form-control" id="aadhar" name="aadhar" placeholder="12-digit UIDAI standard">
+                                    <div class="error-feedback" id="aadharErr"></div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="checkIn" class="form-label fw-semibold">Check-In Date</label>
+                                    <input type="date" class="form-control" id="checkIn" name="checkIn">
+                                    <div class="error-feedback" id="checkInErr"></div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="checkOut" class="form-label fw-semibold">Check-Out Date</label>
+                                    <input type="date" class="form-control" id="checkOut" name="checkOut">
+                                    <div class="error-feedback" id="checkOutErr"></div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="adults" class="form-label fw-semibold">No. of Adults</label>
+                                    <input type="number" class="form-control" id="adults" name="adults" min="1" placeholder="1">
+                                    <div class="error-feedback" id="adultsErr"></div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="address" class="form-label fw-semibold">Residential Address</label>
+                                    <textarea class="form-control" id="address" name="address" rows="2" placeholder="Full street layout coordinates..."></textarea>
+                                    <div class="error-feedback" id="addressErr"></div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="purpose" class="form-label fw-semibold">Purpose of Visit</label>
+                                    <textarea class="form-control" id="purpose" name="purpose" rows="2" placeholder="Business, holiday travel, event attendance etc..."></textarea>
+                                    <div class="error-feedback" id="purposeErr"></div>
+                                </div>
+
+                                <div class="col-12 mt-4 d-flex gap-3">
+                                    <button type="submit" class="btn btn-primary px-4 py-2 fw-bold">Submit Registration</button>
+                                    <button type="button" id="resetBtn" class="btn btn-secondary px-4 py-2">Clear Form</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { CustomerFormHandler } from './app.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            new CustomerFormHandler();
+        });
+    </script>
+</body>
+</html>
