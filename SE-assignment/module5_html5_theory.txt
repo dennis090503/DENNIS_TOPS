@@ -1,0 +1,22 @@
+
+MODULE 5 – HTML5 THEORY ANSWERS
+===============================
+
+1. DIFFERENCE BETWEEN HTML AND HTML5
+HTML:
+Older version with limited multimedia support.
+
+HTML5:
+Supports audio, video, canvas, SVG, semantic tags, and local storage.
+
+2. ADDITIONAL TAGS IN HTML5
+<header>
+<footer>
+<nav>
+<section>
+<article>
+<main>
+<video>
+<audio>
+<canvas>
+<svg>

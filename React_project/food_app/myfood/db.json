@@ -1,0 +1,58 @@
+{
+  "menu": [
+    {
+      "id": 3,
+      "name": "Delicious Pastaaa",
+      "price": 18,
+      "category": "pasta",
+      "image": "/images/f4.png"
+    },
+    {
+      "id": 4,
+      "name": "French Fries",
+      "price": 10,
+      "category": "fries",
+      "image": "/images/f5.png"
+    },
+    {
+      "name": "Veg Burger",
+      "price": "190",
+      "category": "burger",
+      "image": "/images/f2.png",
+      "id": 5
+    },
+    {
+      "name": "Veg masala paneer burger ",
+      "price": "290",
+      "category": "burger",
+      "image": "/images/f2.png",
+      "id": 6
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@test.com",
+      "password": "1234"
+    },
+    {
+      "username": "dennis",
+      "email": "dennislalwani09@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "username": "logan",
+      "email": "logan@test.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "username": "dennis",
+      "email": "abc@gmail.com",
+      "password": "1234",
+      "id": 4
+    }
+  ]
+}

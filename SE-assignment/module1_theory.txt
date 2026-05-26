@@ -1,0 +1,201 @@
+
+MODULE 1 – SOFTWARE ENGINEERING THEORY ANSWERS
+==============================================
+
+1. WHAT IS A PROGRAM?
+A program is a set of instructions written in a programming language that tells a computer how to perform a specific task. Programs are executed by the computer processor and help automate tasks.
+
+2. WHAT IS PROGRAMMING?
+Programming is the process of designing, writing, testing, and maintaining computer programs.
+
+Key Steps in Programming Process:
+1. Problem Analysis
+2. Planning
+3. Writing Algorithm
+4. Coding
+5. Testing
+6. Debugging
+7. Deployment
+8. Maintenance
+
+3. TYPES OF PROGRAMMING LANGUAGES
+High-Level Languages:
+- Easy to understand
+- Human readable
+- Examples: Python, Java
+
+Low-Level Languages:
+- Closer to machine language
+- Faster execution
+- Harder to understand
+- Examples: Assembly Language
+
+4. WORLD WIDE WEB & INTERNET
+Client:
+A client sends requests to the server.
+
+Server:
+A server processes requests and returns responses.
+
+5. TCP/IP MODEL
+Layers:
+1. Application Layer
+2. Transport Layer
+3. Internet Layer
+4. Network Access Layer
+
+Purpose:
+It enables communication between devices over the internet.
+
+6. CLIENT SERVER COMMUNICATION
+The client sends a request.
+The server receives and processes the request.
+The server sends a response back to the client.
+
+7. TYPES OF INTERNET CONNECTIONS
+Broadband:
+- Uses copper cables
+- Moderate speed
+
+Fiber Optic:
+- Uses light signals
+- Very high speed
+- Better reliability
+
+8. HTTP VS HTTPS
+HTTP:
+- Not secure
+- Data transferred in plain text
+
+HTTPS:
+- Secure
+- Uses SSL/TLS encryption
+
+9. APPLICATION SECURITY
+Encryption protects sensitive data from unauthorized access.
+
+Common vulnerabilities:
+1. SQL Injection
+2. Cross Site Scripting
+3. Weak Passwords
+
+10. SYSTEM SOFTWARE VS APPLICATION SOFTWARE
+System Software:
+Controls hardware and system operations.
+Example: Operating System
+
+Application Software:
+Performs user tasks.
+Example: MS Word
+
+11. SOFTWARE ARCHITECTURE
+Modularity helps divide software into smaller manageable components.
+
+12. LAYERS IN SOFTWARE ARCHITECTURE
+Layers improve maintainability, scalability, and organization.
+
+13. SOFTWARE ENVIRONMENT
+Development environments help developers build and test applications safely.
+
+14. SOURCE CODE VS MACHINE CODE
+Source Code:
+Human readable code.
+
+Machine Code:
+Binary instructions executed by computers.
+
+15. VERSION CONTROL
+Version control tracks changes in source code and helps collaboration.
+
+16. GITHUB FOR STUDENTS
+Benefits:
+- Portfolio building
+- Collaboration
+- Open source contribution
+- Version control learning
+
+17. OPEN SOURCE VS PROPRIETARY SOFTWARE
+Open Source:
+Source code is publicly available.
+
+Proprietary:
+Owned by companies and source code is private.
+
+18. GIT IN TEAMWORK
+Git allows multiple developers to work together without conflicts.
+
+19. APPLICATION SOFTWARE IN BUSINESS
+It improves productivity, communication, and automation.
+
+20. SOFTWARE DEVELOPMENT PROCESS
+Stages:
+1. Requirement Gathering
+2. Analysis
+3. Design
+4. Development
+5. Testing
+6. Deployment
+7. Maintenance
+
+21. REQUIREMENT ANALYSIS
+Requirement analysis ensures correct understanding of user needs.
+
+22. SOFTWARE ANALYSIS
+Software analysis identifies functional and non-functional requirements.
+
+23. SYSTEM DESIGN
+Key elements:
+- Architecture
+- Database Design
+- UI Design
+- Security
+
+24. SOFTWARE TESTING
+Testing ensures software quality and removes bugs.
+
+25. SOFTWARE MAINTENANCE TYPES
+1. Corrective
+2. Adaptive
+3. Perfective
+4. Preventive
+
+26. WEB VS DESKTOP APPLICATIONS
+Web Applications:
+- Browser based
+- Internet required
+
+Desktop Applications:
+- Installed on computer
+- Faster performance
+
+27. WEB APPLICATION ADVANTAGES
+- Accessible anywhere
+- Easy updates
+- Cross platform
+
+28. UI/UX DESIGN
+UI/UX improves user satisfaction and usability.
+
+29. NATIVE VS HYBRID MOBILE APPS
+Native Apps:
+- Platform specific
+- Better performance
+
+Hybrid Apps:
+- Cross platform
+- Faster development
+
+30. DFD SIGNIFICANCE
+DFDs show data movement and system processes.
+
+31. DESKTOP APPLICATIONS PROS AND CONS
+Pros:
+- Faster
+- Offline access
+
+Cons:
+- Installation required
+- Platform dependency
+
+32. FLOWCHARTS
+Flowcharts visually represent logic and processes.
