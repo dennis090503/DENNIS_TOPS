@@ -1,0 +1,269 @@
+/* --- CSS Variables & Resets --- */
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #3b82f6;
+    --dark-bg: #0f172a;
+    --light-bg: #f8fafc;
+    --error-color: #dc2626;
+    --success-color: #16a34a;
+    --text-color: #334155;
+    --border-color: #cbd5e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* --- Header & Navbar Layout --- */
+.main-header {
+    background-color: var(--dark-bg);
+    color: #fff;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+.logo h1 span {
+    color: var(--secondary-color);
+}
+
+.system-title {
+    font-weight: 600;
+    background: rgba(255,255,255,0.1);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background 0.3s;
+}
+
+.navbar ul li a:hover, .navbar ul li a.active {
+    background-color: var(--secondary-color);
+}
+
+/* --- Slider Hero Graphic Layout --- */
+.slider-section {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%);
+    color: white;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.slider-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Content Container --- */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.section-divider {
+    margin: 3rem 0;
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+}
+
+/* --- Form Design Layout (CSS Grid) --- */
+.form-section, .submissions-section {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.section-desc {
+    margin-bottom: 1.5rem;
+    color: #64748b;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input, .form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--secondary-color);
+}
+
+/* --- Validation & Feedback Elements --- */
+.error-msg {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    height: 18px; /* Prevents visual layout shifting */
+}
+
+.success-toast {
+    background-color: var(--success-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Interactive Action Buttons --- */
+.form-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-submit {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-color);
+}
+
+.btn-reset {
+    background-color: #e2e8f0;
+    color: var(--text-color);
+}
+
+.btn-reset:hover {
+    background-color: #cbd5e1;
+}
+
+/* --- Responsive Tabular Elements Layout --- */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+table th {
+    background-color: #f1f5f9;
+    color: var(--dark-bg);
+    font-weight: 600;
+}
+
+table tr:hover {
+    background-color: #f8fafc;
+}
+
+.no-data {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
+    font-style: italic;
+    background: #f8fafc;
+    border: 1px dashed var(--border-color);
+    margin-top: 1.5rem;
+    border-radius: 4px;
+}
+
+/* --- Responsive Layout Rules (Mobile View) --- */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+}
