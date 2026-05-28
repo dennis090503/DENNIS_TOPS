@@ -1,0 +1,144 @@
+========================================================================
+                      NETWORKING & HTTP PROTOCOLS
+========================================================================
+
+1. Full forms and one-line uses:
+   - HTTP (Hypertext Transfer Protocol): Used to transmit hypermedia documents, like HTML, across the World Wide Web.
+   - HTTPS (Hypertext Transfer Protocol Secure): A secure version of HTTP that encrypts communications using SSL/TLS to protect data integrity and privacy.
+   - FTP (File Transfer Protocol): Used for transferring files between a client and a server over a computer network.
+   - SMTP (Simple Mail Transfer Protocol): Used by mail servers and clients to send and route email messages across networks.
+
+2. Difference between IPv4 and IPv6:
+   IPv4 uses a 32-bit numeric address space (e.g., 192.168.1.1) supporting ~4.3 billion devices, whereas IPv6 uses a 128-bit hexadecimal address space (e.g., 2001:db8::ff00:42:8329) to provide an essentially inexhaustible number of unique addresses.
+
+3. IP Address from nslookup google.com:
+   Non-authoritative answer:
+   Addresses:  2404:6800:4009:830::200e (IPv6)
+               142.250.67.78 (IPv4)
+
+4. Meaning of HTTP status codes:
+   - 200: OK – The request succeeded, and the server successfully returned the requested data.
+   - 301: Moved Permanently – The requested resource has been assigned a new permanent URL.
+   - 404: Not Found – The server cannot find the requested web page or resource.
+   - 500: Internal Server Error – A generic error indicating the server encountered an unexpected condition that prevented it from fulfilling the request.
+   - 403: Forbidden – The server understands the request, but refuses to authorize access to the resource.
+
+5. DNS Hierarchy (with www.google.com):
+   - Root Level (.): The unspoken dot at the very end of a domain that directs requests to Top-Level Domain (TLD) servers.
+   - Top-Level Domain (TLD) (.com): The broad category server that keeps track of registrations for all domains ending under its specific extension.
+   - Second-Level Domain (google): The unique name registered by an organization or individual within the TLD space.
+   - Subdomain (www): A lower-level subdivision of the main domain used to organize specific web sections or services.
+
+========================================================================
+                   SDLC & AGILE METHODOLOGIES
+========================================================================
+
+6. Six phases of SDLC in order:
+   - 1. Requirement Analysis: Gathering and documenting stakeholder needs to establish a clear project scope.
+   - 2. Design: Planning the technical architecture, user interfaces, system interfaces, and database schemas based on requirements.
+   - 3. Implementation / Coding: Writing code in chosen programming languages to build the actual functional software components.
+   - 4. Testing: Evaluating the software to catch bugs, ensure stability, and verify compliance with original requirements.
+   - 5. Deployment: Releasing the verified software into a live production environment for end-users to access.
+   - 6. Maintenance: Monitoring performance, fixing post-launch bugs, and implementing routine updates or upgrades.
+
+7. Three differences between Agile and Waterfall:
+   - Process: Waterfall follows a linear, sequential structure where phases cannot overlap, while Agile is iterative and cycles through phases continuously.
+   - Flexibility: Waterfall is highly rigid and changes to requirements are difficult to make late in the game, whereas Agile welcomes changing requirements throughout development.
+   - Delivery: Waterfall delivers the complete, final product only at the end of the entire lifecycle, while Agile delivers working software in frequent, small increments.
+
+8. Three main Scrum roles and their responsibilities:
+   - Product Owner: Responsible for defining project requirements, maximizing product value, and maintaining a prioritized Product Backlog.
+   - Scrum Master: Responsible for facilitating the Scrum process, clearing blockers for the team, and ensuring Agile principles are followed.
+   - Developers / Development Team: Responsible for cross-functionally building, testing, and delivering a potentially shippable increment of product during every sprint.
+
+9. Sprint in Scrum:
+   A Sprint is a time-boxed, unbroken iteration during which a Scrum team works to complete a designated set of features or tasks. Its typical duration spans 1 to 4 weeks, with 2 weeks being the industry standard.
+
+10. Jira board columns:
+    - Backlog: A centralized pool of all user stories, tasks, and bugs that need to be addressed but are not yet scheduled for active development.
+    - To Do: Work items that have been committed to the current sprint or work cycle but have not yet been started.
+    - In Progress: Tasks that are actively being worked on by a team member at the present time.
+    - Done: Work items that are fully completed, thoroughly tested, and meet the team's defined "Definition of Done".
+
+========================================================================
+                       VERSION CONTROL & GIT
+========================================================================
+
+11. Git commands:
+    - Initialize a repo: `git init`
+    - Stage all files: `git add .`
+    - Commit with a message: `git commit -m "Your commit message"`
+    - Push to remote: `git push origin main` (assuming default branch is main)
+    - Pull latest changes: `git pull`
+
+12. Difference between git fetch and git pull:
+    `git fetch` only downloads new tracking data and commits from a remote repository without altering your local working state, while `git pull` downloads that data and immediately runs a `git merge` to integrate it directly into your local branch.
+
+13. GitHub Repository Action Note:
+    As an AI, I am unable to physically interact with GitHub's UI or interface with your local operating system to push code. To set this up yourself, create a repository on github.com, then run: `git remote add origin <your-repo-link>` followed by `git push -u origin main`.
+
+14. Difference between a Fork and a Pull Request:
+    A Fork is a complete personal copy of someone else's repository hosted on your own account, whereas a Pull Request is a formal request submitted to the original repository's owners to merge changes from your copy back into their main codebase.
+
+15. Branch creation, commit, and merge commands:
+    ```bash
+    git checkout -b feature-test     # Creates and switches to the new branch
+    git add .                        # Stages your changes
+    git commit -m "Commit message"   # Saves changes on feature-test
+    git checkout main                # Switches back to the main branch
+    git merge feature-test           # Merges feature-test into main
+    ```
+
+========================================================================
+                 IT ROLES, ECOSYSTEM & LANGUAGES
+========================================================================
+
+16. Five IT job roles and descriptions:
+    - Software Engineer: Designs, writes, and tests source code to build functional software programs and applications.
+    - QA Tester: Executes manual and automated tests to locate software bugs and ensure products meet quality standards.
+    - DevOps Engineer: Manages deployment pipelines, automates infrastructure, and bridges the gap between software development and IT operations.
+    - Data Analyst: Examines raw data sets to discover patterns, create visualizations, and generate actionable insights for business decisions.
+    - Scrum Master: Facilitates Agile processes, removes team impediments, and coaches cross-functional groups on Scrum practices.
+
+17. Product vs. Service companies:
+    - Product Companies: Create and sell their own proprietary software goods (e.g., Microsoft sells Windows/Office; Adobe builds Creative Cloud tools; Google builds its Search and workspace ecosystem).
+    - Service Companies: Provide custom technical labor, consulting, or project management to third-party clients (e.g., TCS builds banking portals for global financial institutions; Infosys manages IT infrastructure for global retail brands; Accenture provides custom software integration consulting for manufacturing systems).
+
+18. Full forms and one-line uses:
+    - GitHub (Git Hosting platform): Used to host, manage, and collaborate on software repositories using the Git version control system.
+    - Slack (Searchable Log of All Conversation and Knowledge): Used as a corporate instant-messaging platform for team communication and tool integration.
+    - Jira (Not an acronym; derived from 'Gojira'): Used as an issue tracking and project management tool designed for Agile software development teams.
+    - IDE (Integrated Development Environment): Used as a comprehensive code editor containing built-in debugging, syntax highlighting, and compilation tools (e.g., VS Code).
+    - API (Application Programming Interface): Used as a structured software intermediary that allows two separate applications to communicate and share data with one another.
+
+19. Five programming languages and popular use cases:
+    - JavaScript: Used extensively for handling interactive behaviors on client-side web applications.
+    - Python: Widely preferred for writing data science models, machine learning algorithms, and automation scripts.
+    - Java: Extensively leveraged for building secure, large-scale enterprise enterprise backends and legacy systems.
+    - Swift: The primary, native language utilized for building applications targeting Apple iOS and macOS platforms.
+    - SQL: A domain-specific programming language dedicated to querying, updating, and managing relational databases.
+
+20. Difference between a developer and a tester:
+    A developer focuses on interpreting requirements to design, write, and build software features, whereas a tester focuses on interrogating that built software to uncover edge cases, bugs, and defects before final release.
+
+========================================================================
+                     SOFTWARE ARCHITECTURE
+========================================================================
+
+21. Three main layers of software architecture:
+    - Presentation Layer (Frontend): The graphical user interface and client-facing layer that directly handles user interaction and inputs.
+    - Application/Business Logic Layer (Backend): The processing hub that validates data, executes core calculations, and directs system rules.
+    - Data Layer (Database): The persistent storage subsystem responsible for organizing, writing, and retrieving application records safely.
+
+22. Client and Server definitions:
+    A Client is any local hardware device or application (like a web browser) that requests a resource or service, while a Server is a remote computer system that listens for those requests, processes them, and returns the requested data.
+    Real-life example: Ordering food at a restaurant; you are the Client placing an order request, and the kitchen acts as the Server preparing and delivering the exact dish you requested.
+
+23. Two differences each between desktop, web, and mobile apps:
+    - Installation & Updates: Desktop apps require local OS installation and manual/packaged updates; web apps load directly via browsers without installation and are updated instantaneously on the host server; mobile apps require downloads and version updates via specialized ecosystem storefronts (App Store/Play Store).
+    - Portability & Hardware Access: Desktop apps run locally with extensive access to file systems and heavy CPU resources; web apps run in sandboxed environments across any device with a browser but have restricted hardware access; mobile apps run on portable smart devices with built-in access to mobile hardware like GPS, cameras, and biometric sensors.
+
+24. Three databases and types:
+    - PostgreSQL: Relational (SQL)
+    - MongoDB: Document-oriented (NoSQL)
+    - Redis: Key-Value Store (NoSQL)
