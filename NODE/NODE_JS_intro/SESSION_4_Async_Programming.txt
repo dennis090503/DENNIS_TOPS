@@ -1,0 +1,11 @@
+Title: SESSION 4 - Async Programming
+
+1. Write a Node.js function getUserProfile(username, callback) that simulates fetching a user profile from an array after 2 seconds using setTimeout, then calls the callback with the result.
+2. Refactor a Zomato-style food order function that uses nested callbacks (callback hell) to instead use Promises for each step: selectRestaurant, selectFood, and placeOrder. Each should resolve after 1 second.
+3. Convert the following callback-based function to use async/await syntax: a function that fetches a playlist by name from an array, then adds a new song to it, both with simulated delays.<br><br><em><strong>Hint:</strong> Use setTimeout to simulate the delay in both steps, and wrap them in Promises before using async/await.</em>
+4. Build a function getMovieDetails(title) that returns a Promise and resolves with movie info after 1 second. Use async/await to call this function for three different movies in sequence and print each result.
+5. Use ChatGPT or Copilot to generate a Node.js function that fetches cricket match scores from a mock API using Promises, then review and run the code to check if it handles errors properly.<br><br><em><strong>Hint:</strong> Paste your prompt and the AI's response in your submission.</em>
+
+
+Sample Answer:
+Provide Node.js implementation for each task as described. (Automated full solutions omitted due to length.)

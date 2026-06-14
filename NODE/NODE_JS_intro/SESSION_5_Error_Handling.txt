@@ -1,0 +1,11 @@
+Title: SESSION 5 - Error Handling
+
+1. Create a function getUserById(userId) that throws a custom Error object if the userId is not a positive number, and returns a fake user object otherwise.<br><br><em><strong>Hint:</strong> Use 'throw new Error("Invalid userId")' for error handling.</em>
+2. Wrap a call to a function fetchSongLyrics(songName) inside a try/catch block and log a custom error message if an exception occurs, simulating an API call failure like Spotify's lyrics fetch.
+3. Build an async function getOrderStatus(orderId) that uses setTimeout to simulate a delayed response. If orderId is missing, reject the promise with an Error. Handle the error using try/catch with async/await.<br><br><em><strong>Hint:</strong> Remember to use 'await' and catch errors in the async function.</em>
+4. Given the following buggy code, fix it so that errors from the async function are properly caught and logged: <br><br>async function fetchMovieDetails() { throw new Error('Movie not found'); }<br>try { fetchMovieDetails(); } catch (err) { console.log(err.message); }<br><br><em><strong>Hint:</strong> Why doesn't the catch block work as expected with async functions?</em>
+5. Refactor an existing function that fetches product details from a fake Flipkart API so that it handles both synchronous and asynchronous errors gracefully, always returning a user-friendly error message instead of crashing the app.
+
+
+Sample Answer:
+Provide Node.js implementation for each task as described. (Automated full solutions omitted due to length.)

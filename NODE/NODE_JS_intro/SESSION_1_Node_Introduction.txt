@@ -1,0 +1,10 @@
+Title: SESSION 1 - Node Introduction
+
+1. Install Node.js on your system, open a terminal, and run the command node -v to verify the installation.
+2. Create a file called helloNode.js and write a script that prints 'Hello from Node.js!' to the console using console.log().
+3. Write a Node.js script in a file called userInfo.js that declares variables for your name, age, and favorite app, then prints a sentence using all three values.
+4. Research and write a short note (3-4 lines) on how Node.js handles multiple client requests at the same time, mentioning the concept of event-driven non-blocking architecture.<br><br><em><strong>Hint:</strong> Focus on the event loop and single-threaded model.</em>
+
+
+Sample Answer:
+Provide Node.js implementation for each task as described. (Automated full solutions omitted due to length.)

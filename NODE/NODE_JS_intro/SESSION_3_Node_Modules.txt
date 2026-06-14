@@ -1,0 +1,11 @@
+Title: SESSION 3 - Node Modules
+
+1. Use the Node.js FS module to create a script named createPlaylist.js that writes an array of 5 favorite song names (as strings) into a file called playlist.txt.
+2. Write a script using the PATH module that takes a file path like '/user/music/playlist.txt' and prints the directory name, base name, and file extension separately in the console.<br><br><em><strong>Hint:</strong> Use path.dirname(), path.basename(), and path.extname().</em>
+3. Build a Node.js script called readBookList.js that reads the contents of a file named books.txt and displays each book name on a new line in the console.<br><br><em><strong>Constraint:</strong> Use fs.readFile with a callback, not the synchronous method.</em>
+4. Create an EventEmitter in a file called notificationSystem.js that emits a 'newMessage' event whenever a new chat message is received, and logs 'You have a new message!' each time the event is triggered.
+5. Extend your notificationSystem.js to emit a 'newFollower' event with the follower's username as data, and log 'You are followed by [username]' when the event occurs.<br><br><em><strong>Hint:</strong> Pass the username as an argument when emitting the event and access it in the event handler.</em>
+
+
+Sample Answer:
+Provide Node.js implementation for each task as described. (Automated full solutions omitted due to length.)

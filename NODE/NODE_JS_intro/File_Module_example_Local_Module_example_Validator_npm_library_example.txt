@@ -1,0 +1,10 @@
+Title: File Module example, Local Module example, Validator npm library example
+
+1. Create a Node.js script named readPlaylist.js that uses the built-in 'fs' (File System) module to read and display the contents of a file called playlist.txt, which contains a list of your 5 favorite songs (one per line).
+2. Write a local module in a file called discountCalculator.js that exports a function calculateDiscount(price, percent). In a separate file app.js, import this module and use it to calculate the final price for a Flipkart-style shopping cart total of ₹1500 with a 10% discount.
+3. Install the 'validator' npm library and use it in a script called emailChecker.js to check if a user-entered email is valid. Prompt for input using the readline module, then display 'Valid Email' or 'Invalid Email' based on the result.
+4. Refactor your discountCalculator.js module so that it also exports a function called applyCoupon(price, couponCode), which applies a flat ₹100 off if the couponCode is 'SAVE100'. Update app.js to use this new function and show the final price after applying the coupon.<br><br><em><strong>Hint:</strong> Use module.exports to export multiple functions from discountCalculator.js.</em>
+
+
+Sample Answer:
+Provide Node.js implementation for each task as described. (Automated full solutions omitted due to length.)

@@ -1,0 +1,11 @@
+Title: SESSION 6 - Node Security Basics
+
+1. Create a .env file in your Node project to store a secret API key and database password, then load and print these values securely in your app using the dotenv package.
+2. Write a signup endpoint in Node that accepts a username and email, and validate the inputs to ensure the username is at least 4 characters and the email contains '@' and '.', returning an error message if validation fails.<br><br><em><strong>Hint:</strong> Use express-validator or write custom validation logic before saving the data.</em>
+3. Simulate a Zomato-style promo code input: build a function that takes a promo code from the user, checks if it matches a list of allowed codes, and rejects any code containing special characters or spaces.
+4. Store a Spotify API token in your .env file and write a function to read and use this token for making a dummy API call (no real API call needed, just log the token use), ensuring the token is never hardcoded in your source files.
+5. Use ChatGPT or GitHub Copilot to suggest improvements for securely handling environment variables in your Node app, then implement one of the suggestions and describe what you changed.
+
+
+Sample Answer:
+Provide Node.js implementation for each task as described. (Automated full solutions omitted due to length.)

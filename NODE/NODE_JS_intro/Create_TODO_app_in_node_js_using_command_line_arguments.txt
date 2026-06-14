@@ -1,0 +1,10 @@
+Title: Create TODO app in node js using command line arguments
+
+1. Create a Node.js script called addTask.js that takes a task description as a command line argument and saves it to a file named todo.txt.
+2. Build a Node.js script called listTasks.js that reads all tasks from todo.txt and displays them in a numbered list in the console.
+3. Write a Node.js script called removeTask.js that accepts a task number as a command line argument and removes the corresponding task from todo.txt, then displays the updated list.<br><br><em><strong>Hint:</strong> Use the fs module to read and write files, and process.argv to access command line arguments.</em>
+4. Refactor your addTask.js script to prevent adding duplicate tasks (case-insensitive) to todo.txt.
+
+
+Sample Answer:
+Provide Node.js implementation for each task as described. (Automated full solutions omitted due to length.)

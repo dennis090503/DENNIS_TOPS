@@ -1,0 +1,12 @@
+Title: Node JS introduction, Chrome V8 engine, Core Modules, Local Modules, NPM Modules, module.exports, nodemon
+
+1. Install Node.js on your system, open a terminal, and run node -v to confirm the installation.
+2. Create a file called helloV8.js and write a simple JavaScript function that logs the result of 5 + 7. Run it using Node.js and observe how the Chrome V8 engine executes your code.
+3. Build a small script in timeNow.js that uses Node's built-in os and path core modules to print your operating system's platform and the current file's directory path.
+4. Create a local module called playlist.js that exports an array of 5 favorite Spotify song names using module.exports, then import and display this array in a separate file called app.js.
+5. Install the chalk npm module in your project and use it in a file called colorLogger.js to print 'Welcome to Node.js!' in green color in the terminal.<br><br><em><strong>Hint:</strong> Use npm install chalk and require('chalk') in your code.</em>
+6. Install nodemon globally and use it to run your app.js file. Make a change to the file (like updating a console.log message) and confirm that nodemon automatically restarts the script.
+
+
+Sample Answer:
+Provide Node.js implementation for each task as described. (Automated full solutions omitted due to length.)

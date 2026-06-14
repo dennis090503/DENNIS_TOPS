@@ -1,0 +1,11 @@
+Title: Command line arguments, Process object, Args parsing with Yargs, Storing data with JSON, Filter VS Find, Reading and Writing notes
+
+1. Create a Node.js script called greet.js that takes your name as a command line argument and prints 'Hello, <your name>!' in the console using process.argv.
+2. Use the Yargs library to build a script called addSong.js that accepts --title and --artist arguments, then saves the song details to a songs.json file as a new object in an array.
+3. Write a Node.js script called searchSong.js that reads songs.json and uses Array.filter to find all songs by a given artist (passed as a command line argument), then displays the matching song titles.
+4. Given the following array of objects representing movies: [{id:1, name:'Jawan'}, {id:2, name:'Pathaan'}, {id:3, name:'Animal'}], use Array.find to write a function findMovieById(id) that returns the movie object with the matching id.<br><br><em><strong>Hint:</strong> Test your function with id 2 and log the result.</em>
+5. Modify your addSong.js script to check if a song with the same title already exists in songs.json before adding it. If it does, print 'Song already exists', otherwise add it and print 'Song added successfully'.<br><br><em><strong>Hint:</strong> Use Array.find to check for duplicates.</em>
+
+
+Sample Answer:
+Provide Node.js implementation for each task as described. (Automated full solutions omitted due to length.)
