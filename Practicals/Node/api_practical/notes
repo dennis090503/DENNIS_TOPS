@@ -1,0 +1,9 @@
+# 1. Create a new directory and move into it
+mkdir api_practical
+cd api_practical
+
+# 2. Initialize a new Node.js project (creates package.json)
+npm init -y
+
+# 3. Install Express and the Native MongoDB Driver
+npm install express mongodb

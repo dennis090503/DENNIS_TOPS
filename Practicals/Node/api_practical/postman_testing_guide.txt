@@ -1,0 +1,154 @@
+========================================================================
+POSTMAN TESTING SUITE & VERIFICATION GUIDE
+========================================================================
+Project: Simple REST API (Keyword System)
+Database: MongoDB (Native Driver)
+Server URL: http://localhost:3000
+========================================================================
+
+------------------------------------------------------------------------
+1. CREATE USER
+------------------------------------------------------------------------
+- Purpose:       Inserts a single user document into the database.
+- Route:         /users
+- HTTP Method:   POST
+- Headers:       Key: Content-Type
+                 Value: application/json
+- Body Format:   raw -> JSON
+
+[Sample Request Body]
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com",
+  "age": 28
+}
+
+[Sample Success Response] (Status: 201 Created)
+{
+  "message": "User created successfully",
+  "userId": "6678ab2cd12ef34567890abc",
+  "user": {
+    "_id": "6678ab2cd12ef34567890abc",
+    "name": "Jane Doe",
+    "email": "jane@example.com",
+    "age": 28
+  }
+}
+
+[Sample Error Response] (Status: 400 Bad Request)
+{
+  "error": "Missing required fields: name, email, and age are mandatory."
+}
+
+------------------------------------------------------------------------
+2. GET ALL USERS
+------------------------------------------------------------------------
+- Purpose:       Retrieves all user documents from MongoDB.
+- Route:         /users
+- HTTP Method:   GET
+- Headers:       None
+- Body Format:   None (Empty)
+
+[Sample Success Response] (Status: 200 OK)
+[
+  {
+    "_id": "6678ab2cd12ef34567890abc",
+    "name": "Jane Doe",
+    "email": "jane@example.com",
+    "age": 28
+  }
+]
+
+------------------------------------------------------------------------
+3. GET SINGLE USER BY ID
+------------------------------------------------------------------------
+- Purpose:       Finds a single user using their unique MongoDB ObjectId.
+- Route:         /users/:id  (e.g., /users/6678ab2cd12ef34567890abc)
+- HTTP Method:   GET
+- Headers:       None
+- Body Format:   None (Empty)
+
+[Sample Success Response] (Status: 200 OK)
+{
+  "_id": "6678ab2cd12ef34567890abc",
+  "name": "Jane Doe",
+  "email": "jane@example.com",
+  "age": 28
+}
+
+[Sample Error Response] (Status: 404 Not Found)
+{
+  "error": "User not found."
+}
+
+[Sample Format Error] (Status: 400 Bad Request)
+{
+  "error": "Invalid ID format. Must be a 24-character hex string."
+}
+
+------------------------------------------------------------------------
+4. UPDATE SINGLE USER BY ID
+------------------------------------------------------------------------
+- Purpose:       Updates user fields selectively using their ObjectId.
+- Route:         /users/:id  (e.g., /users/6678ab2cd12ef34567890abc)
+- HTTP Method:   PUT
+- Headers:       Key: Content-Type
+                 Value: application/json
+- Body Format:   raw -> JSON
+
+[Sample Request Body]
+{
+  "age": 29
+}
+
+[Sample Success Response] (Status: 200 OK)
+{
+  "message": "User updated successfully",
+  "user": {
+    "_id": "6678ab2cd12ef34567890abc",
+    "name": "Jane Doe",
+    "email": "jane@example.com",
+    "age": 29
+  }
+}
+
+[Sample Error Response] (Status: 404 Not Found)
+{
+  "error": "User not found."
+}
+
+------------------------------------------------------------------------
+5. DELETE SINGLE USER BY ID
+------------------------------------------------------------------------
+- Purpose:       Deletes a user from the collection using their ObjectId.
+- Route:         /users/:id  (e.g., /users/6678ab2cd12ef34567890abc)
+- HTTP Method:   DELETE
+- Headers:       None
+- Body Format:   None (Empty)
+
+[Sample Success Response] (Status: 200 OK)
+{
+  "message": "User deleted successfully",
+  "deletedUser": {
+    "_id": "6678ab2cd12ef34567890abc",
+    "name": "Jane Doe",
+    "email": "jane@example.com",
+    "age": 29
+  }
+}
+
+========================================================================
+VERIFICATION & DATABASE CHECKING STEPS
+========================================================================
+
+How to Verify Server Execution:
+1. Run 'node server.js' in your terminal.
+2. Ensure you see:
+   "Server running smoothly on http://localhost:3000"
+   "Successfully connected to MongoDB local instance."
+
+How to Verify Data is Stored inside MongoDB:
+1. Open a new terminal window.
+2. Launch the Mongo Shell by typing: mongosh
+3. Switch to your database: use keyword_system
+4. Look at the collections data: db.users.find().pretty()
