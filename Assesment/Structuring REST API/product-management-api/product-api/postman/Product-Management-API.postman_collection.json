@@ -1,0 +1,206 @@
+{
+  "info": {
+    "name": "Product Management API",
+    "description": "TOPS Technologies Assessment - Structuring REST API. Covers Auth, Categories, and Products endpoints. The collection-level pre-request script automatically injects the saved JWT into the Authorization header for any request under the 'Admin Protected' folders.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Auto-inject the JWT saved by the Login request into the Authorization header",
+          "const token = pm.environment.get('jwt_token');",
+          "if (token) {",
+          "    pm.request.headers.upsert({ key: 'Authorization', value: 'Bearer ' + token });",
+          "}"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:5000/api" }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register Admin",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Admin User\",\n  \"email\": \"admin@example.com\",\n  \"password\": \"admin123\",\n  \"role\": \"admin\"\n}"
+            },
+            "url": { "raw": "{{base_url}}/auth/register", "host": ["{{base_url}}"], "path": ["auth", "register"] }
+          }
+        },
+        {
+          "name": "Login (saves jwt_token)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const data = pm.response.json();",
+                  "if (data.token) {",
+                  "    pm.environment.set('jwt_token', data.token);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"admin123\"\n}"
+            },
+            "url": { "raw": "{{base_url}}/auth/login", "host": ["{{base_url}}"], "path": ["auth", "login"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get All Categories",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{base_url}}/categories", "host": ["{{base_url}}"], "path": ["categories"] }
+          }
+        },
+        {
+          "name": "Get Category By Id",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{base_url}}/categories/{{category_id}}", "host": ["{{base_url}}"], "path": ["categories", "{{category_id}}"] }
+          }
+        },
+        {
+          "name": "Create Category (Admin)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const data = pm.response.json();",
+                  "if (data.data && data.data._id) {",
+                  "    pm.environment.set('category_id', data.data._id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Electronics\",\n  \"description\": \"Electronic gadgets and devices\"\n}"
+            },
+            "url": { "raw": "{{base_url}}/categories", "host": ["{{base_url}}"], "path": ["categories"] }
+          }
+        },
+        {
+          "name": "Update Category (Admin)",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"description\": \"Updated description\"\n}"
+            },
+            "url": { "raw": "{{base_url}}/categories/{{category_id}}", "host": ["{{base_url}}"], "path": ["categories", "{{category_id}}"] }
+          }
+        },
+        {
+          "name": "Delete Category (Admin)",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{base_url}}/categories/{{category_id}}", "host": ["{{base_url}}"], "path": ["categories", "{{category_id}}"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{base_url}}/products", "host": ["{{base_url}}"], "path": ["products"] }
+          }
+        },
+        {
+          "name": "Get Product By Id",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{base_url}}/products/{{product_id}}", "host": ["{{base_url}}"], "path": ["products", "{{product_id}}"] }
+          }
+        },
+        {
+          "name": "Create Product (Admin, multipart + image)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const data = pm.response.json();",
+                  "if (data.data && data.data._id) {",
+                  "    pm.environment.set('product_id', data.data._id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "name", "value": "Wireless Mouse", "type": "text" },
+                { "key": "description", "value": "Ergonomic wireless mouse", "type": "text" },
+                { "key": "price", "value": "799", "type": "text" },
+                { "key": "stock", "value": "50", "type": "text" },
+                { "key": "category", "value": "{{category_id}}", "type": "text" },
+                { "key": "image", "type": "file", "src": "" }
+              ]
+            },
+            "url": { "raw": "{{base_url}}/products", "host": ["{{base_url}}"], "path": ["products"] }
+          }
+        },
+        {
+          "name": "Update Product (Admin, optional new image)",
+          "request": {
+            "method": "PUT",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                { "key": "price", "value": "749", "type": "text" },
+                { "key": "image", "type": "file", "src": "" }
+              ]
+            },
+            "url": { "raw": "{{base_url}}/products/{{product_id}}", "host": ["{{base_url}}"], "path": ["products", "{{product_id}}"] }
+          }
+        },
+        {
+          "name": "Delete Product (Admin)",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{base_url}}/products/{{product_id}}", "host": ["{{base_url}}"], "path": ["products", "{{product_id}}"] }
+          }
+        }
+      ]
+    }
+  ]
+}
