@@ -1,0 +1,31 @@
+********when uploading for the first time********
+
+
+# 1. Initialize a blank local Git repository inside your folder
+git init
+
+# 2. Add all files in the current folder to the staging area
+git add .
+
+# 3. Create a snapshot commit of your current codebase
+git commit -m "feat: integrate secure asynchronous web3forms pipeline"
+
+# 4. Ensure your primary branch is explicitly named 'main'
+git branch -M main
+
+# 5. Link your local project folder to your remote GitHub repository
+git remote add origin https://github.com/dennis090503/whats-next-site.git
+
+# 6. Push the code up to GitHub (forces creation of the tracking branch)
+git push -u origin main
+
+
+********when uploading after some changes in the code base********
+# 1. Stage all modified and newly created files
+git add .
+
+# 2. Commit the changes with a short descriptive note of what you altered
+git commit -m "style: optimize layout spacing on contact matrix grid"
+
+# 3. Push the updates to your repository
+git push origin main
